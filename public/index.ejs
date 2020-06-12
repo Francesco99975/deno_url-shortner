@@ -66,6 +66,9 @@
     crossorigin="anonymous"
   ></script>
   <script type="text/javascript">
+    const prod = true;
+    const API = prod ? "https://desolate-forest-30340.herokuapp.com" : "http://localhost:5000";
+
     const form = document.querySelector("form");
     const output = document.getElementById("output");
     const outmod = document.getElementById("cst");
@@ -80,7 +83,7 @@
       if(url.match(regUrl)) {
         const data = { url };
       
-        const res = await fetch("http://localhost:5000/url", {
+        const res = await fetch(`${API}/url`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
