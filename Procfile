@@ -1,1 +1,1 @@
-web: deno run --allow-net=:${PORT} --allow-env=:${PORT} --allow-read=:${PORT} --cached-only server.ts --port=${PORT}
+web: deno run --allow-net --allow-env --allow-read --cached-only server.ts
