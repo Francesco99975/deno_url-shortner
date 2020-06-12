@@ -4,6 +4,8 @@ import { dbCreds } from "./config.prod.ts";
 
 const client = new Client(dbCreds);
 
+console.log(dbCreds);
+
 const shortenUrl = async (
   { request, response }: { request: any; response: any },
 ) => {
