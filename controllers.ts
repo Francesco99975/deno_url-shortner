@@ -1,6 +1,6 @@
 import { Client } from "https://deno.land/x/postgres/mod.ts";
 import nanoid from "https://deno.land/x/nanoid/mod.ts";
-import { dbCreds } from "./config.ts";
+import { dbCreds } from "./config.prod.ts";
 
 const client = new Client(dbCreds);
 
